@@ -30,45 +30,48 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "courses")
 public class Course {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.UUID)
 	private UUID id;
-	
+
 	@Column(length = 50, nullable = false)
 	private String courseName;
-	
+
+	@Column(nullable = false)
+	private UUID orderId;
+
 	@Column(nullable = false)
 	private Date startDate;
-	
+
 	@Column(nullable = false)
 	private Date endDate;
-	
+
 	@CreatedBy
 	@Column(nullable = false)
-	private User createdBy;
-	
+	private UUID createdBy;
+
 	@LastModifiedBy
 	@Column(nullable = false)
-	private User updatedBy;
-    
-	@CreatedDate
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(nullable = false, updatable = false)
-    private Date createdAt;
-    
-    @LastModifiedDate
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(nullable = true)
-    private Date updatedAt;
-    
-    @PrePersist
-    protected void onCreate() {
-        createdAt = new Date();
-    }
+	private UUID updatedBy;
 
-    @PreUpdate
-    protected void onUpdate() {
-        updatedAt = new Date();
-    }
+	@CreatedDate
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(nullable = false, updatable = false)
+	private Date createdAt;
+
+	@LastModifiedDate
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(nullable = true)
+	private Date updatedAt;
+
+	@PrePersist
+	protected void onCreate() {
+		createdAt = new Date();
+	}
+
+	@PreUpdate
+	protected void onUpdate() {
+		updatedAt = new Date();
+	}
 }

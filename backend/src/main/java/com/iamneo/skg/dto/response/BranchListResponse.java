@@ -1,6 +1,6 @@
 package com.iamneo.skg.dto.response;
 
-import java.util.UUID;
+import java.util.List;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,8 +11,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserResponse {
-	private UUID id;
-	private String name;
-	private String email;
+public class BranchListResponse {
+    private boolean status;
+    private List<BranchResponse> trainerList;
 }

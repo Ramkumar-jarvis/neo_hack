@@ -11,8 +11,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserResponse {
-	private UUID id;
-	private String name;
-	private String email;
+public class BranchResponse {
+    private UUID id;
+    private String name;
 }

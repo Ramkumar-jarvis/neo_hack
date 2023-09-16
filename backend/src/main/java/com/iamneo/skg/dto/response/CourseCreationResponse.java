@@ -1,7 +1,5 @@
 package com.iamneo.skg.dto.response;
 
-import java.util.UUID;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,8 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserResponse {
-	private UUID id;
-	private String name;
-	private String email;
+public class CourseCreationResponse {
+    private boolean status;
+    private String message;
 }

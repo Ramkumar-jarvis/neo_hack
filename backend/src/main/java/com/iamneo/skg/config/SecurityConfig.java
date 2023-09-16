@@ -57,23 +57,37 @@ public class SecurityConfig {
                                 .authorizeHttpRequests(authorize -> authorize
                                                 .requestMatchers(MyConstant.AUTH_API_PATH + "/**",
                                                                 MyConstant.SWAGGER_UI + "/**",
-                                                                MyConstant.SWAGGER_UI_HTML)
+                                                                MyConstant.SWAGGER_UI_HTML,
+                                                                MyConstant.BRANCH_API_PATH + "/**",
+                                                                MyConstant.DEPARTMENT_API_PATH + "/**")
                                                 .permitAll()
                                                 // Admin
                                                 .requestMatchers(MyConstant.ADMIN_API_PATH + "/**")
                                                 .hasRole(ADMIN.name())
-                                                .requestMatchers(GET, MyConstant.ADMIN_API_PATH + "/**")
+                                                .requestMatchers(GET, MyConstant.ADMIN_API_PATH + "/**",
+                                                                MyConstant.COURSE_API_PATH + "/**",
+                                                                MyConstant.BRANCH_API_PATH + "/**",
+                                                                MyConstant.DEPARTMENT_API_PATH + "/**")
                                                 .hasAuthority(ADMIN_READ.name())
-                                                .requestMatchers(POST, MyConstant.ADMIN_API_PATH + "/**")
+                                                .requestMatchers(POST, MyConstant.ADMIN_API_PATH + "/**",
+                                                                MyConstant.COURSE_API_PATH + "/**",
+                                                                MyConstant.BRANCH_API_PATH + "/**",
+                                                                MyConstant.DEPARTMENT_API_PATH + "/**")
                                                 .hasAuthority(ADMIN_CREATE.name())
-                                                .requestMatchers(PUT, MyConstant.ADMIN_API_PATH + "/**")
+                                                .requestMatchers(PUT, MyConstant.ADMIN_API_PATH + "/**",
+                                                                MyConstant.COURSE_API_PATH + "/**",
+                                                                MyConstant.BRANCH_API_PATH + "/**",
+                                                                MyConstant.DEPARTMENT_API_PATH + "/**")
                                                 .hasAuthority(ADMIN_UPDATE.name())
                                                 .requestMatchers(DELETE, MyConstant.ADMIN_API_PATH + "/**")
                                                 .hasAuthority(ADMIN_DELETE.name())
                                                 // Trainer
                                                 .requestMatchers(MyConstant.TRAINER_API_PATH + "/**")
                                                 .hasAnyRole(ADMIN.name(), TRAINER.name())
-                                                .requestMatchers(GET, MyConstant.TRAINER_API_PATH + "/**")
+                                                .requestMatchers(GET, MyConstant.TRAINER_API_PATH + "/**",
+                                                                MyConstant.COURSE_API_PATH + "/**",
+                                                                MyConstant.BRANCH_API_PATH + "/**",
+                                                                MyConstant.DEPARTMENT_API_PATH + "/**")
                                                 .hasAnyAuthority(ADMIN_READ.name(), TRAINER_READ.name())
                                                 .requestMatchers(POST, MyConstant.TRAINER_API_PATH + "/**")
                                                 .hasAnyAuthority(ADMIN_CREATE.name(), TRAINER_CREATE.name())
@@ -84,7 +98,10 @@ public class SecurityConfig {
                                                 // Student
                                                 .requestMatchers(MyConstant.STUDENT_API_PATH + "/**")
                                                 .hasAnyRole(ADMIN.name(), STUDENT.name())
-                                                .requestMatchers(GET, MyConstant.STUDENT_API_PATH + "/**")
+                                                .requestMatchers(GET, MyConstant.STUDENT_API_PATH + "/**",
+                                                                MyConstant.COURSE_API_PATH + "/**",
+                                                                MyConstant.BRANCH_API_PATH + "/**",
+                                                                MyConstant.DEPARTMENT_API_PATH + "/**")
                                                 .hasAnyAuthority(ADMIN_READ.name(), STUDENT_READ.name())
                                                 .requestMatchers(POST, MyConstant.STUDENT_API_PATH + "/**")
                                                 .hasAnyAuthority(ADMIN_CREATE.name(), STUDENT_CREATE.name())

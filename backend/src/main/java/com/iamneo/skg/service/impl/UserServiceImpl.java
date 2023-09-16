@@ -25,39 +25,40 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 
-    private final UserRepository userRepository;
-    private final PasswordEncoder passwordEncoder;
-    private final AuthenticationManager authenticationManager;
-    private final JwtUtil jwtUtil;
+	private final UserRepository userRepository;
+	private final PasswordEncoder passwordEncoder;
+	private final AuthenticationManager authenticationManager;
+	private final JwtUtil jwtUtil;
 
 	@Override
 	public boolean userRegistration(RegisterRequest request) {
 		Optional<User> isUserExists = userRepository.findByEmail(request.getEmail());
 		if (!isUserExists.isPresent()) {
 			var user = User.builder()
-			.userName(request.getFirstName() + " " + request.getLastName())
-			.firstName(request.getFirstName())
-			.lastName(request.getLastName())
-			.email(request.getEmail())
-			.portalStatus(request.getPortalStatus())
-			.registrationNumber(request.getRegistrationNumber())
-			.password(passwordEncoder.encode(request.getPassword()))
-			.role(Role.STUDENT)
-			.build();
-            userRepository.save(user);
-            return true;
-        } else {
-            return false;
-        }
+					.userName(request.getFirstName() + " " + request.getLastName())
+					.firstName(request.getFirstName())
+					.lastName(request.getLastName())
+					.email(request.getEmail())
+					.portalStatus(request.getPortalStatus())
+					.registrationNumber(request.getRegistrationNumber())
+					.password(passwordEncoder.encode(request.getPassword()))
+					.role(Role.STUDENT)
+					.build();
+			userRepository.save(user);
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	@Override
 	public AuthenticationResponse userAuthentication(AuthenticationRequest request) {
 		authenticationManager.authenticate(
-				new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword())
-			);
+				new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword()));
 		var user = userRepository.findByEmail(request.getEmail()).orElseThrow();
+		System.out.println(user);
 		var userResponse = UserResponse.builder()
+				.id(user.getId())
 				.name(user.getFirstName() + " " + user.getLastName())
 				.email(user.getEmail())
 				.build();
