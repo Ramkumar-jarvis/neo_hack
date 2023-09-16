@@ -84,3 +84,16 @@ button:focus-visible {
 :where(.css-dev-only-do-not-override-i0102m).ant-select-single{
   height: 42px !important;
 }
+
+:where(.css-dev-only-do-not-override-i0102m).ant-picker{
+  background-color: rgb(247, 249, 252) !important;
+}
+:where(.css-dev-only-do-not-override-i0102m).ant-input{
+  background-color: rgb(247, 249, 252) !important;
+}
+:where(.css-dev-only-do-not-override-i0102m).ant-select:not(.ant-select-customize-input) .ant-select-selector{
+  background-color: rgb(247, 249, 252) !important;
+}
+:where(.css-dev-only-do-not-override-i0102m).ant-input-number .ant-input-number-input{
+  background-color: rgb(247, 249, 252) !important;
+}
