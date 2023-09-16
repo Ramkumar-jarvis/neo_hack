@@ -1,7 +1,6 @@
 package com.iamneo.skg.controller;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,7 +17,6 @@ import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping(MyConstant.AUTH_API_PATH)
-@CrossOrigin
 @RequiredArgsConstructor
 @Tag(name = "Authentication")
 public class AuthenticationController {
@@ -31,7 +29,7 @@ public class AuthenticationController {
         return isRegistered ? ResponseEntity.ok("User registered successfully")
                 : ResponseEntity.badRequest().body("Sommething went wrong!");
     }
-    
+
     @PostMapping("/login")
     public ResponseEntity<AuthenticationResponse> authenticate(@RequestBody AuthenticationRequest request) {
         return ResponseEntity.ok(userService.userAuthentication(request));
