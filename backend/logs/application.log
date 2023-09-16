@@ -1,0 +1,757 @@
+2023-09-16T12:10:16.856+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : Starting SkgApplication using Java 17.0.8.1 with PID 26820 (D:\iamneo\clueless_coder\Hackathon\neo_hack\backend\target\classes started by KARUPPUKULLA in D:\iamneo\clueless_coder\Hackathon\neo_hack\backend)
+2023-09-16T12:10:16.863+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-09-16T12:10:17.014+05:30  INFO 26820 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-09-16T12:10:17.015+05:30  INFO 26820 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-09-16T12:10:19.397+05:30  INFO 26820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-16T12:10:19.580+05:30  INFO 26820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 160 ms. Found 1 JPA repository interfaces.
+2023-09-16T12:10:21.393+05:30  INFO 26820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8181 (http)
+2023-09-16T12:10:21.413+05:30  INFO 26820 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-16T12:10:21.414+05:30  INFO 26820 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-16T12:10:21.618+05:30  INFO 26820 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-16T12:10:21.620+05:30  INFO 26820 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4601 ms
+2023-09-16T12:10:22.018+05:30  INFO 26820 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-16T12:10:22.173+05:30  INFO 26820 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-16T12:10:22.181+05:30  INFO 26820 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-16T12:10:22.645+05:30  INFO 26820 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-16T12:10:23.148+05:30  INFO 26820 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-16T12:10:23.202+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-16T12:10:25.750+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4fe501e9
+2023-09-16T12:10:25.754+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-16T12:10:26.039+05:30  WARN 26820 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-09-16T12:10:26.606+05:30  INFO 26820 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-16T12:10:27.902+05:30  INFO 26820 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-16T12:10:43.062+05:30  INFO 26820 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-16T12:10:44.166+05:30  WARN 26820 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-16T12:10:44.863+05:30  INFO 26820 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@560ecad1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7ff0a26b, org.springframework.security.web.context.SecurityContextHolderFilter@7b872773, org.springframework.security.web.header.HeaderWriterFilter@3f2a33a3, org.springframework.security.web.authentication.logout.LogoutFilter@787b8410, com.iamneo.skg.config.JwtAuthenticationFilter@447412c7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@152eab41, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5ffed6ec, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7295c2ea, org.springframework.security.web.session.SessionManagementFilter@33eb82a2, org.springframework.security.web.access.ExceptionTranslationFilter@438ecacb, org.springframework.security.web.access.intercept.AuthorizationFilter@67f9c5ce]
+2023-09-16T12:10:45.422+05:30  INFO 26820 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-16T12:10:45.507+05:30  INFO 26820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8181 (http) with context path ''
+2023-09-16T12:10:45.532+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : Started SkgApplication in 29.649 seconds (process running for 31.333)
+2023-09-16T12:14:12.978+05:30  INFO 26820 --- [http-nio-8181-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-16T12:14:12.979+05:30  INFO 26820 --- [http-nio-8181-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-16T12:14:12.982+05:30  INFO 26820 --- [http-nio-8181-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-09-16T13:01:31.914+05:30 ERROR 26820 --- [http-nio-8181-exec-10] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-09-16T07:07:18Z. Current time: 2023-09-16T07:31:31Z, a difference of 1453911 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:427) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at com.iamneo.skg.util.JwtUtil.extractAllClaims(JwtUtil.java:39) ~[classes/:na]
+	at com.iamneo.skg.util.JwtUtil.extractClaim(JwtUtil.java:30) ~[classes/:na]
+	at com.iamneo.skg.util.JwtUtil.extractUserEmail(JwtUtil.java:26) ~[classes/:na]
+	at com.iamneo.skg.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:39) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2023-09-16T13:02:54.545+05:30 ERROR 26820 --- [http-nio-8181-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-09-16T07:07:18Z. Current time: 2023-09-16T07:32:54Z, a difference of 1536545 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:427) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at com.iamneo.skg.util.JwtUtil.extractAllClaims(JwtUtil.java:39) ~[classes/:na]
+	at com.iamneo.skg.util.JwtUtil.extractClaim(JwtUtil.java:30) ~[classes/:na]
+	at com.iamneo.skg.util.JwtUtil.extractUserEmail(JwtUtil.java:26) ~[classes/:na]
+	at com.iamneo.skg.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:39) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.1.3.jar:6.1.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2023-09-16T13:07:33.753+05:30  INFO 26820 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-16T13:07:34.011+05:30  INFO 26820 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-16T13:07:34.018+05:30  INFO 26820 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-16T13:07:34.042+05:30  WARN 26820 --- [Thread-5] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.8.1/java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.base@17.0.8.1/java.lang.Thread.run(Unknown Source)
+2023-09-16T13:07:34.087+05:30  INFO 26820 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-16T13:07:34.161+05:30  INFO 26820 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-09-16T13:07:36.616+05:30  INFO 26820 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-09-16T13:07:37.019+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : Starting SkgApplication using Java 17.0.8.1 with PID 26820 (D:\iamneo\clueless_coder\Hackathon\neo_hack\backend\target\classes started by KARUPPUKULLA in D:\iamneo\clueless_coder\Hackathon\neo_hack\backend)
+2023-09-16T13:07:37.027+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-09-16T13:07:38.267+05:30  INFO 26820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-16T13:07:38.373+05:30  INFO 26820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103 ms. Found 1 JPA repository interfaces.
+2023-09-16T13:07:39.480+05:30  INFO 26820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8181 (http)
+2023-09-16T13:07:39.485+05:30  INFO 26820 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-16T13:07:39.488+05:30  INFO 26820 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-16T13:07:40.067+05:30  INFO 26820 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-16T13:07:40.096+05:30  INFO 26820 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3046 ms
+2023-09-16T13:07:40.633+05:30  INFO 26820 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-16T13:07:40.668+05:30  INFO 26820 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-16T13:07:40.694+05:30  INFO 26820 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-16T13:07:40.717+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-09-16T13:07:44.779+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@783f88ea
+2023-09-16T13:07:44.781+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-09-16T13:07:44.785+05:30  WARN 26820 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-09-16T13:07:45.259+05:30  INFO 26820 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-16T13:07:46.744+05:30  INFO 26820 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-16T13:08:06.066+05:30  INFO 26820 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-16T13:08:06.491+05:30  WARN 26820 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-16T13:08:06.741+05:30  INFO 26820 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@175f2429, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@55303bd8, org.springframework.security.web.context.SecurityContextHolderFilter@21a0f718, org.springframework.security.web.header.HeaderWriterFilter@2f7dda94, org.springframework.security.web.authentication.logout.LogoutFilter@5a8e0aa, com.iamneo.skg.config.JwtAuthenticationFilter@5cc56b23, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5bf16b47, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1a19b3d7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@186ee225, org.springframework.security.web.session.SessionManagementFilter@44dfbd3e, org.springframework.security.web.access.ExceptionTranslationFilter@71b16348, org.springframework.security.web.access.intercept.AuthorizationFilter@2838e6d]
+2023-09-16T13:08:07.038+05:30  INFO 26820 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-16T13:08:07.103+05:30  INFO 26820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8181 (http) with context path ''
+2023-09-16T13:08:07.119+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : Started SkgApplication in 30.226 seconds (process running for 3472.92)
+2023-09-16T13:08:07.132+05:30  INFO 26820 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-16T13:08:08.480+05:30  INFO 26820 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-16T13:08:08.511+05:30  INFO 26820 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-16T13:08:08.517+05:30  WARN 26820 --- [Thread-7] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-2 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.8.1/java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.base@17.0.8.1/java.lang.Thread.run(Unknown Source)
+2023-09-16T13:08:08.524+05:30  WARN 26820 --- [Thread-7] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-2 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.8.1/java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.LinkedBlockingQueue.poll(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.base@17.0.8.1/java.lang.Thread.run(Unknown Source)
+2023-09-16T13:08:08.543+05:30  INFO 26820 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-16T13:08:08.547+05:30  INFO 26820 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-09-16T13:08:10.790+05:30  INFO 26820 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-09-16T13:08:11.037+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : Starting SkgApplication using Java 17.0.8.1 with PID 26820 (D:\iamneo\clueless_coder\Hackathon\neo_hack\backend\target\classes started by KARUPPUKULLA in D:\iamneo\clueless_coder\Hackathon\neo_hack\backend)
+2023-09-16T13:08:11.040+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-09-16T13:08:11.895+05:30  INFO 26820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-16T13:08:11.950+05:30  INFO 26820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 1 JPA repository interfaces.
+2023-09-16T13:08:12.522+05:30  INFO 26820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8181 (http)
+2023-09-16T13:08:12.562+05:30  INFO 26820 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-16T13:08:12.566+05:30  INFO 26820 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-16T13:08:12.767+05:30  INFO 26820 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-16T13:08:12.770+05:30  INFO 26820 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1718 ms
+2023-09-16T13:08:12.961+05:30  INFO 26820 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-16T13:08:12.984+05:30  INFO 26820 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-16T13:08:12.987+05:30  INFO 26820 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-16T13:08:12.992+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-09-16T13:08:16.030+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e4aa6c7
+2023-09-16T13:08:16.032+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-09-16T13:08:16.035+05:30  WARN 26820 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-09-16T13:08:16.198+05:30  INFO 26820 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-16T13:08:16.466+05:30  INFO 26820 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-16T13:08:36.433+05:30  INFO 26820 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-16T13:08:36.744+05:30  WARN 26820 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-16T13:08:36.932+05:30  INFO 26820 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3f30d4cf, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@b1f7da9, org.springframework.security.web.context.SecurityContextHolderFilter@7d80597f, org.springframework.security.web.header.HeaderWriterFilter@45fc7085, org.springframework.security.web.authentication.logout.LogoutFilter@4f60da5, com.iamneo.skg.config.JwtAuthenticationFilter@63e115a4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@271e6179, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1c04547, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@66ca2dc8, org.springframework.security.web.session.SessionManagementFilter@76119d39, org.springframework.security.web.access.ExceptionTranslationFilter@c1acbd5, org.springframework.security.web.access.intercept.AuthorizationFilter@535e3cd7]
+2023-09-16T13:08:37.130+05:30  INFO 26820 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-16T13:08:37.159+05:30  INFO 26820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8181 (http) with context path ''
+2023-09-16T13:08:37.168+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : Started SkgApplication in 26.207 seconds (process running for 3502.969)
+2023-09-16T13:08:37.174+05:30  INFO 26820 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-16T13:09:12.544+05:30  INFO 26820 --- [http-nio-8181-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-16T13:09:12.546+05:30  INFO 26820 --- [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-16T13:09:12.564+05:30  INFO 26820 --- [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2023-09-16T13:10:17.289+05:30  INFO 26820 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2023-09-16T13:10:17.415+05:30  INFO 26820 --- [Thread-11] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-16T13:10:17.418+05:30  INFO 26820 --- [Thread-11] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-16T13:10:17.430+05:30  WARN 26820 --- [Thread-11] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-3 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.8.1/java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.base@17.0.8.1/java.lang.Thread.run(Unknown Source)
+2023-09-16T13:10:17.453+05:30  INFO 26820 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-16T13:10:17.461+05:30  INFO 26820 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2023-09-16T13:10:19.979+05:30  INFO 26820 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2023-09-16T13:10:20.215+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : Starting SkgApplication using Java 17.0.8.1 with PID 26820 (D:\iamneo\clueless_coder\Hackathon\neo_hack\backend\target\classes started by KARUPPUKULLA in D:\iamneo\clueless_coder\Hackathon\neo_hack\backend)
+2023-09-16T13:10:20.218+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-09-16T13:10:21.369+05:30  INFO 26820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-16T13:10:21.416+05:30  INFO 26820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 1 JPA repository interfaces.
+2023-09-16T13:10:21.855+05:30  INFO 26820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8181 (http)
+2023-09-16T13:10:21.860+05:30  INFO 26820 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-16T13:10:21.863+05:30  INFO 26820 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-16T13:10:21.978+05:30  INFO 26820 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-16T13:10:21.983+05:30  INFO 26820 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1757 ms
+2023-09-16T13:10:22.160+05:30  INFO 26820 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-16T13:10:22.185+05:30  INFO 26820 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-16T13:10:22.185+05:30  INFO 26820 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-16T13:10:22.193+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2023-09-16T13:10:26.461+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1559825e
+2023-09-16T13:10:26.468+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2023-09-16T13:10:26.468+05:30  WARN 26820 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-09-16T13:10:26.665+05:30  INFO 26820 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-16T13:10:27.002+05:30  INFO 26820 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-16T13:10:51.689+05:30  INFO 26820 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-16T13:10:52.103+05:30  WARN 26820 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-16T13:10:52.307+05:30  INFO 26820 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7c323721, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@98344f3, org.springframework.security.web.context.SecurityContextHolderFilter@3d1a7a76, org.springframework.security.web.header.HeaderWriterFilter@15520eb0, org.springframework.security.web.authentication.logout.LogoutFilter@4f87586c, com.iamneo.skg.config.JwtAuthenticationFilter@5df8101b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@32c40cf5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@37e6a393, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@66ec7b20, org.springframework.security.web.session.SessionManagementFilter@1bc1b221, org.springframework.security.web.access.ExceptionTranslationFilter@2d1b010, org.springframework.security.web.access.intercept.AuthorizationFilter@5fce9cc3]
+2023-09-16T13:10:52.516+05:30  INFO 26820 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-16T13:10:52.543+05:30  INFO 26820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8181 (http) with context path ''
+2023-09-16T13:10:52.574+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : Started SkgApplication in 32.428 seconds (process running for 3638.376)
+2023-09-16T13:10:52.574+05:30  INFO 26820 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-16T13:15:26.789+05:30  INFO 26820 --- [http-nio-8181-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-16T13:15:26.797+05:30  INFO 26820 --- [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-16T13:15:26.806+05:30  INFO 26820 --- [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2023-09-16T13:17:34.813+05:30  INFO 26820 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-16T13:17:34.881+05:30  INFO 26820 --- [Thread-15] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-16T13:17:34.884+05:30  INFO 26820 --- [Thread-15] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-16T13:17:34.897+05:30  WARN 26820 --- [Thread-15] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-4 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.8.1/java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.base@17.0.8.1/java.lang.Thread.run(Unknown Source)
+2023-09-16T13:17:34.912+05:30  INFO 26820 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-16T13:17:34.921+05:30  INFO 26820 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2023-09-16T13:17:37.735+05:30  INFO 26820 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2023-09-16T13:17:38.049+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : Starting SkgApplication using Java 17.0.8.1 with PID 26820 (D:\iamneo\clueless_coder\Hackathon\neo_hack\backend\target\classes started by KARUPPUKULLA in D:\iamneo\clueless_coder\Hackathon\neo_hack\backend)
+2023-09-16T13:17:38.055+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-09-16T13:17:39.982+05:30  INFO 26820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-16T13:17:40.065+05:30  INFO 26820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 1 JPA repository interfaces.
+2023-09-16T13:17:41.289+05:30  INFO 26820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8181 (http)
+2023-09-16T13:17:41.293+05:30  INFO 26820 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-16T13:17:41.295+05:30  INFO 26820 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-16T13:17:41.633+05:30  INFO 26820 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-16T13:17:41.637+05:30  INFO 26820 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3568 ms
+2023-09-16T13:17:41.903+05:30  INFO 26820 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-16T13:17:41.924+05:30  INFO 26820 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-16T13:17:41.926+05:30  INFO 26820 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-16T13:17:41.930+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2023-09-16T13:17:44.766+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@60c7f72d
+2023-09-16T13:17:44.772+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2023-09-16T13:17:44.776+05:30  WARN 26820 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-09-16T13:17:45.086+05:30  INFO 26820 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-16T13:17:45.769+05:30  INFO 26820 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-16T13:18:05.577+05:30  INFO 26820 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-16T13:18:05.985+05:30  WARN 26820 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-16T13:18:06.170+05:30  INFO 26820 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@27e33168, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@68aecbca, org.springframework.security.web.context.SecurityContextHolderFilter@6edc55b, org.springframework.security.web.header.HeaderWriterFilter@28ca0505, org.springframework.security.web.authentication.logout.LogoutFilter@5063fc32, com.iamneo.skg.config.JwtAuthenticationFilter@333aedd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@536bf5e1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b7120a4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6a7edb32, org.springframework.security.web.session.SessionManagementFilter@453ac29d, org.springframework.security.web.access.ExceptionTranslationFilter@2f4f5394, org.springframework.security.web.access.intercept.AuthorizationFilter@7efda003]
+2023-09-16T13:18:06.364+05:30  INFO 26820 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-16T13:18:06.394+05:30  INFO 26820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8181 (http) with context path ''
+2023-09-16T13:18:06.403+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : Started SkgApplication in 28.452 seconds (process running for 4072.204)
+2023-09-16T13:18:06.409+05:30  INFO 26820 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-16T13:18:07.837+05:30  INFO 26820 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2023-09-16T13:18:07.898+05:30  INFO 26820 --- [Thread-19] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-16T13:18:07.908+05:30  WARN 26820 --- [Thread-19] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-5 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.8.1/java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.base@17.0.8.1/java.lang.Thread.run(Unknown Source)
+2023-09-16T13:18:07.915+05:30  WARN 26820 --- [Thread-19] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-5 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.8.1/java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.LinkedBlockingQueue.poll(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.base@17.0.8.1/java.lang.Thread.run(Unknown Source)
+2023-09-16T13:18:07.929+05:30  INFO 26820 --- [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-16T13:18:07.932+05:30  INFO 26820 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2023-09-16T13:18:10.258+05:30  INFO 26820 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2023-09-16T13:18:10.493+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : Starting SkgApplication using Java 17.0.8.1 with PID 26820 (D:\iamneo\clueless_coder\Hackathon\neo_hack\backend\target\classes started by KARUPPUKULLA in D:\iamneo\clueless_coder\Hackathon\neo_hack\backend)
+2023-09-16T13:18:10.495+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-09-16T13:18:11.116+05:30  INFO 26820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-16T13:18:11.149+05:30  INFO 26820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 1 JPA repository interfaces.
+2023-09-16T13:18:11.437+05:30  INFO 26820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8181 (http)
+2023-09-16T13:18:11.439+05:30  INFO 26820 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-16T13:18:11.441+05:30  INFO 26820 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-16T13:18:11.560+05:30  INFO 26820 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-16T13:18:11.562+05:30  INFO 26820 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1058 ms
+2023-09-16T13:18:11.704+05:30  INFO 26820 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-16T13:18:11.717+05:30  INFO 26820 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-16T13:18:11.719+05:30  INFO 26820 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-16T13:18:11.722+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2023-09-16T13:18:16.092+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3ab509f4
+2023-09-16T13:18:16.094+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2023-09-16T13:18:16.096+05:30  WARN 26820 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-09-16T13:18:16.233+05:30  INFO 26820 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-16T13:18:16.522+05:30  INFO 26820 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-16T13:18:36.987+05:30  INFO 26820 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-16T13:18:37.226+05:30  WARN 26820 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-16T13:18:37.390+05:30  INFO 26820 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@b66c889, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@70ff181e, org.springframework.security.web.context.SecurityContextHolderFilter@7885ba9a, org.springframework.security.web.header.HeaderWriterFilter@4d33e90a, org.springframework.security.web.authentication.logout.LogoutFilter@187c73c8, com.iamneo.skg.config.JwtAuthenticationFilter@18d3fb4d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4199c4f2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@13301e72, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@b9a0ae2, org.springframework.security.web.session.SessionManagementFilter@3e4c1b58, org.springframework.security.web.access.ExceptionTranslationFilter@3c00b4ac, org.springframework.security.web.access.intercept.AuthorizationFilter@49dd564]
+2023-09-16T13:18:37.581+05:30  INFO 26820 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-16T13:18:37.624+05:30  INFO 26820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8181 (http) with context path ''
+2023-09-16T13:18:37.632+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : Started SkgApplication in 27.186 seconds (process running for 4103.433)
+2023-09-16T13:18:37.640+05:30  INFO 26820 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-16T13:18:46.280+05:30  INFO 26820 --- [http-nio-8181-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-16T13:18:46.280+05:30  INFO 26820 --- [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-16T13:18:46.287+05:30  INFO 26820 --- [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-09-16T13:19:58.151+05:30  INFO 26820 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-16T13:19:58.328+05:30  INFO 26820 --- [Thread-23] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-16T13:19:58.364+05:30  INFO 26820 --- [Thread-23] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-16T13:19:58.387+05:30  WARN 26820 --- [Thread-23] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-6 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.8.1/java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.base@17.0.8.1/java.lang.Thread.run(Unknown Source)
+2023-09-16T13:19:58.417+05:30  INFO 26820 --- [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-16T13:19:58.423+05:30  INFO 26820 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2023-09-16T13:20:01.701+05:30  INFO 26820 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2023-09-16T13:20:01.869+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : Starting SkgApplication using Java 17.0.8.1 with PID 26820 (D:\iamneo\clueless_coder\Hackathon\neo_hack\backend\target\classes started by KARUPPUKULLA in D:\iamneo\clueless_coder\Hackathon\neo_hack\backend)
+2023-09-16T13:20:01.871+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-09-16T13:20:02.483+05:30  INFO 26820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-16T13:20:02.525+05:30  INFO 26820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 1 JPA repository interfaces.
+2023-09-16T13:20:02.860+05:30  INFO 26820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8181 (http)
+2023-09-16T13:20:02.863+05:30  INFO 26820 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-16T13:20:02.865+05:30  INFO 26820 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-16T13:20:02.973+05:30  INFO 26820 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-16T13:20:02.975+05:30  INFO 26820 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1100 ms
+2023-09-16T13:20:03.097+05:30  INFO 26820 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-16T13:20:03.116+05:30  INFO 26820 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-16T13:20:03.118+05:30  INFO 26820 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-16T13:20:03.129+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2023-09-16T13:20:05.386+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3fcc98bc
+2023-09-16T13:20:05.389+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2023-09-16T13:20:05.393+05:30  WARN 26820 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-09-16T13:20:05.650+05:30  INFO 26820 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-16T13:20:06.054+05:30  INFO 26820 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-16T13:20:25.515+05:30  INFO 26820 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-16T13:20:25.994+05:30  WARN 26820 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-16T13:20:26.317+05:30  INFO 26820 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@d50ab92, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5e78814c, org.springframework.security.web.context.SecurityContextHolderFilter@7f39dc10, org.springframework.security.web.header.HeaderWriterFilter@6db3ef52, org.springframework.security.web.authentication.logout.LogoutFilter@47ae034, com.iamneo.skg.config.JwtAuthenticationFilter@2c0f6c2c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@25184380, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@57a3f10e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@70f4cf8c, org.springframework.security.web.session.SessionManagementFilter@2248136b, org.springframework.security.web.access.ExceptionTranslationFilter@62270b9c, org.springframework.security.web.access.intercept.AuthorizationFilter@2bfa1184]
+2023-09-16T13:20:26.811+05:30  INFO 26820 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-16T13:20:26.906+05:30  INFO 26820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8181 (http) with context path ''
+2023-09-16T13:20:26.918+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : Started SkgApplication in 25.096 seconds (process running for 4212.718)
+2023-09-16T13:20:26.928+05:30  INFO 26820 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-16T13:20:28.295+05:30  INFO 26820 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2023-09-16T13:20:28.425+05:30  INFO 26820 --- [Thread-27] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-16T13:20:28.528+05:30  WARN 26820 --- [Thread-27] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-7 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.8.1/java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.base@17.0.8.1/java.lang.Thread.run(Unknown Source)
+2023-09-16T13:20:28.583+05:30  WARN 26820 --- [Thread-27] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-7 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.8.1/java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.LinkedBlockingQueue.poll(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.base@17.0.8.1/java.lang.Thread.run(Unknown Source)
+2023-09-16T13:20:28.714+05:30  INFO 26820 --- [Thread-27] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-16T13:20:28.759+05:30  INFO 26820 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2023-09-16T13:20:31.705+05:30  INFO 26820 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2023-09-16T13:20:32.020+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : Starting SkgApplication using Java 17.0.8.1 with PID 26820 (D:\iamneo\clueless_coder\Hackathon\neo_hack\backend\target\classes started by KARUPPUKULLA in D:\iamneo\clueless_coder\Hackathon\neo_hack\backend)
+2023-09-16T13:20:32.028+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-09-16T13:20:33.857+05:30  INFO 26820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-16T13:20:33.928+05:30  INFO 26820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 1 JPA repository interfaces.
+2023-09-16T13:20:34.373+05:30  INFO 26820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8181 (http)
+2023-09-16T13:20:34.376+05:30  INFO 26820 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-16T13:20:34.377+05:30  INFO 26820 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-16T13:20:34.493+05:30  INFO 26820 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-16T13:20:34.495+05:30  INFO 26820 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2459 ms
+2023-09-16T13:20:34.623+05:30  INFO 26820 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-16T13:20:34.705+05:30  INFO 26820 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-16T13:20:34.707+05:30  INFO 26820 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-16T13:20:34.710+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2023-09-16T13:20:38.331+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d367120
+2023-09-16T13:20:38.343+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2023-09-16T13:20:38.350+05:30  WARN 26820 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-09-16T13:20:38.662+05:30  INFO 26820 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-16T13:20:39.185+05:30  INFO 26820 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-16T13:20:58.232+05:30  INFO 26820 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-16T13:20:58.430+05:30  WARN 26820 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-16T13:20:58.561+05:30  INFO 26820 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@26e56b21, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@164fee25, org.springframework.security.web.context.SecurityContextHolderFilter@3c2d3373, org.springframework.security.web.header.HeaderWriterFilter@179d0080, org.springframework.security.web.authentication.logout.LogoutFilter@108403c3, com.iamneo.skg.config.JwtAuthenticationFilter@5f15fd67, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2f939889, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@50f504fb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31bc6eb0, org.springframework.security.web.session.SessionManagementFilter@7abdf75d, org.springframework.security.web.access.ExceptionTranslationFilter@422e1ee, org.springframework.security.web.access.intercept.AuthorizationFilter@5bca9cc1]
+2023-09-16T13:20:58.695+05:30  INFO 26820 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-16T13:20:58.722+05:30  INFO 26820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8181 (http) with context path ''
+2023-09-16T13:20:58.730+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : Started SkgApplication in 26.829 seconds (process running for 4244.531)
+2023-09-16T13:20:58.734+05:30  INFO 26820 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-16T13:21:00.155+05:30  INFO 26820 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-16T13:21:00.198+05:30  INFO 26820 --- [Thread-31] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-16T13:21:00.203+05:30  WARN 26820 --- [Thread-31] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-8 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.8.1/java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.base@17.0.8.1/java.lang.Thread.run(Unknown Source)
+2023-09-16T13:21:00.209+05:30  WARN 26820 --- [Thread-31] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-8 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.8.1/java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.LinkedBlockingQueue.poll(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.base@17.0.8.1/java.lang.Thread.run(Unknown Source)
+2023-09-16T13:21:00.221+05:30  INFO 26820 --- [Thread-31] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-16T13:21:00.226+05:30  INFO 26820 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2023-09-16T13:21:03.355+05:30  INFO 26820 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2023-09-16T13:21:03.519+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : Starting SkgApplication using Java 17.0.8.1 with PID 26820 (D:\iamneo\clueless_coder\Hackathon\neo_hack\backend\target\classes started by KARUPPUKULLA in D:\iamneo\clueless_coder\Hackathon\neo_hack\backend)
+2023-09-16T13:21:03.522+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-09-16T13:21:04.003+05:30  INFO 26820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-16T13:21:04.045+05:30  INFO 26820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 1 JPA repository interfaces.
+2023-09-16T13:21:04.349+05:30  INFO 26820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8181 (http)
+2023-09-16T13:21:04.352+05:30  INFO 26820 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-16T13:21:04.354+05:30  INFO 26820 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-16T13:21:04.462+05:30  INFO 26820 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-16T13:21:04.464+05:30  INFO 26820 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 937 ms
+2023-09-16T13:21:04.581+05:30  INFO 26820 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-16T13:21:04.591+05:30  INFO 26820 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-16T13:21:04.592+05:30  INFO 26820 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-16T13:21:04.595+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2023-09-16T13:21:06.981+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4946b04e
+2023-09-16T13:21:06.982+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2023-09-16T13:21:06.984+05:30  WARN 26820 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-09-16T13:21:07.145+05:30  INFO 26820 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-16T13:21:07.316+05:30  INFO 26820 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-16T13:21:25.573+05:30  INFO 26820 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-16T13:21:25.814+05:30  WARN 26820 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-16T13:21:26.009+05:30  INFO 26820 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@509ebc1c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3044709c, org.springframework.security.web.context.SecurityContextHolderFilter@7632bca5, org.springframework.security.web.header.HeaderWriterFilter@267da211, org.springframework.security.web.authentication.logout.LogoutFilter@89d04ef, com.iamneo.skg.config.JwtAuthenticationFilter@6365bcc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@386836c0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@734e76f6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@16b00933, org.springframework.security.web.session.SessionManagementFilter@185015f9, org.springframework.security.web.access.ExceptionTranslationFilter@465118a3, org.springframework.security.web.access.intercept.AuthorizationFilter@71c3dc1d]
+2023-09-16T13:21:26.250+05:30  INFO 26820 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-16T13:21:26.301+05:30  INFO 26820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8181 (http) with context path ''
+2023-09-16T13:21:26.318+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : Started SkgApplication in 22.835 seconds (process running for 4272.119)
+2023-09-16T13:21:26.330+05:30  INFO 26820 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-16T13:21:36.470+05:30  INFO 26820 --- [http-nio-8181-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-16T13:21:36.479+05:30  INFO 26820 --- [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-16T13:21:36.500+05:30  INFO 26820 --- [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2023-09-16T13:26:34.783+05:30  INFO 26820 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-16T13:26:34.881+05:30  INFO 26820 --- [Thread-35] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-16T13:26:34.902+05:30  INFO 26820 --- [Thread-35] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-16T13:26:34.919+05:30  WARN 26820 --- [Thread-35] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-9 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.8.1/java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.base@17.0.8.1/java.lang.Thread.run(Unknown Source)
+2023-09-16T13:26:34.952+05:30  INFO 26820 --- [Thread-35] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-16T13:26:34.955+05:30  INFO 26820 --- [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2023-09-16T13:26:37.548+05:30  INFO 26820 --- [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2023-09-16T13:26:37.735+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : Starting SkgApplication using Java 17.0.8.1 with PID 26820 (D:\iamneo\clueless_coder\Hackathon\neo_hack\backend\target\classes started by KARUPPUKULLA in D:\iamneo\clueless_coder\Hackathon\neo_hack\backend)
+2023-09-16T13:26:37.737+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-09-16T13:26:38.082+05:30  INFO 26820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-16T13:26:38.113+05:30  INFO 26820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 1 JPA repository interfaces.
+2023-09-16T13:26:38.357+05:30  INFO 26820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8181 (http)
+2023-09-16T13:26:38.359+05:30  INFO 26820 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-16T13:26:38.363+05:30  INFO 26820 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-16T13:26:38.439+05:30  INFO 26820 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-16T13:26:38.441+05:30  INFO 26820 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 699 ms
+2023-09-16T13:26:38.536+05:30  INFO 26820 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-16T13:26:38.557+05:30  INFO 26820 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-16T13:26:38.559+05:30  INFO 26820 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-16T13:26:38.565+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2023-09-16T13:26:42.067+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Added connection com.mysql.cj.jdbc.ConnectionImpl@52ba6f12
+2023-09-16T13:26:42.069+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2023-09-16T13:26:42.072+05:30  WARN 26820 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-09-16T13:26:42.297+05:30  INFO 26820 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-16T13:26:42.522+05:30  INFO 26820 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-16T13:27:01.223+05:30  INFO 26820 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-16T13:27:01.438+05:30  WARN 26820 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-16T13:27:01.641+05:30  INFO 26820 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3fa31c95, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6a45193c, org.springframework.security.web.context.SecurityContextHolderFilter@687ef41b, org.springframework.security.web.header.HeaderWriterFilter@848bea1, org.springframework.security.web.authentication.logout.LogoutFilter@37bc41fc, com.iamneo.skg.config.JwtAuthenticationFilter@606fee08, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@74e8aa16, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3918bf9c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@43f1d4be, org.springframework.security.web.session.SessionManagementFilter@32646201, org.springframework.security.web.access.ExceptionTranslationFilter@1800815b, org.springframework.security.web.access.intercept.AuthorizationFilter@7a2d4e12]
+2023-09-16T13:27:01.877+05:30  INFO 26820 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-16T13:27:01.938+05:30  INFO 26820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8181 (http) with context path ''
+2023-09-16T13:27:01.945+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : Started SkgApplication in 24.246 seconds (process running for 4607.746)
+2023-09-16T13:27:01.951+05:30  INFO 26820 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-16T13:27:13.177+05:30  INFO 26820 --- [http-nio-8181-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-16T13:27:13.185+05:30  INFO 26820 --- [http-nio-8181-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-16T13:27:13.185+05:30  INFO 26820 --- [http-nio-8181-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-09-16T13:30:11.107+05:30  INFO 26820 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-16T13:30:11.183+05:30  INFO 26820 --- [Thread-39] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-16T13:30:11.189+05:30  INFO 26820 --- [Thread-39] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-16T13:30:11.214+05:30  WARN 26820 --- [Thread-39] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-10 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.8.1/java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.base@17.0.8.1/java.lang.Thread.run(Unknown Source)
+2023-09-16T13:30:11.230+05:30  INFO 26820 --- [Thread-39] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-16T13:30:11.234+05:30  INFO 26820 --- [Thread-39] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2023-09-16T13:30:14.548+05:30  INFO 26820 --- [Thread-39] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2023-09-16T13:30:14.735+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : Starting SkgApplication using Java 17.0.8.1 with PID 26820 (D:\iamneo\clueless_coder\Hackathon\neo_hack\backend\target\classes started by KARUPPUKULLA in D:\iamneo\clueless_coder\Hackathon\neo_hack\backend)
+2023-09-16T13:30:14.737+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-09-16T13:30:15.134+05:30  INFO 26820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-16T13:30:15.166+05:30  INFO 26820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 1 JPA repository interfaces.
+2023-09-16T13:30:15.463+05:30  INFO 26820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8181 (http)
+2023-09-16T13:30:15.466+05:30  INFO 26820 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-16T13:30:15.467+05:30  INFO 26820 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-16T13:30:15.573+05:30  INFO 26820 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-16T13:30:15.574+05:30  INFO 26820 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 829 ms
+2023-09-16T13:30:15.717+05:30  INFO 26820 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-16T13:30:15.736+05:30  INFO 26820 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-16T13:30:15.737+05:30  INFO 26820 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-16T13:30:15.741+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2023-09-16T13:30:18.971+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-11 - Added connection com.mysql.cj.jdbc.ConnectionImpl@110fe916
+2023-09-16T13:30:18.978+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2023-09-16T13:30:18.982+05:30  WARN 26820 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-09-16T13:30:19.172+05:30  INFO 26820 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-16T13:30:19.341+05:30  INFO 26820 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-16T13:30:37.945+05:30  INFO 26820 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-16T13:30:39.214+05:30  WARN 26820 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-16T13:30:39.524+05:30  INFO 26820 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@55b358a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4e005a1, org.springframework.security.web.context.SecurityContextHolderFilter@561fe66c, org.springframework.security.web.header.HeaderWriterFilter@741bc7c8, org.springframework.security.web.authentication.logout.LogoutFilter@576ada0a, com.iamneo.skg.config.JwtAuthenticationFilter@3a5a2c00, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@68c1671f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@424ec848, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3512c8d4, org.springframework.security.web.session.SessionManagementFilter@520dd21e, org.springframework.security.web.access.ExceptionTranslationFilter@4b7eb3db, org.springframework.security.web.access.intercept.AuthorizationFilter@483439]
+2023-09-16T13:30:39.541+05:30  WARN 26820 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'corsConfigurationSource' defined in class path resource [com/iamneo/skg/config/SecurityConfig.class]: Failed to instantiate [org.springframework.web.cors.CorsConfigurationSource]: Factory method 'corsConfigurationSource' threw exception with message: Unresolved compilation problem: 
+	String literal is not properly closed by a double-quote
+
+2023-09-16T13:30:39.543+05:30  INFO 26820 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-16T13:30:39.545+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2023-09-16T13:30:41.709+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+2023-09-16T13:30:41.713+05:30  INFO 26820 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-16T13:30:41.741+05:30  INFO 26820 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-09-16T13:30:41.865+05:30 ERROR 26820 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'corsConfigurationSource' defined in class path resource [com/iamneo/skg/config/SecurityConfig.class]: Failed to instantiate [org.springframework.web.cors.CorsConfigurationSource]: Factory method 'corsConfigurationSource' threw exception with message: Unresolved compilation problem: 
+	String literal is not properly closed by a double-quote
+
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:659) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:493) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1332) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.3.jar:3.1.3]
+	at com.iamneo.skg.SkgApplication.main(SkgApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.3.jar:3.1.3]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.cors.CorsConfigurationSource]: Factory method 'corsConfigurationSource' threw exception with message: Unresolved compilation problem: 
+	String literal is not properly closed by a double-quote
+
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:171) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655) ~[spring-beans-6.0.11.jar:6.0.11]
+	... 24 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	String literal is not properly closed by a double-quote
+
+	at com.iamneo.skg.config.SecurityConfig.corsConfigurationSource(SecurityConfig.java:109) ~[classes/:na]
+	at com.iamneo.skg.config.SecurityConfig$$SpringCGLIB$$0.CGLIB$corsConfigurationSource$1(<generated>) ~[classes/:na]
+	at com.iamneo.skg.config.SecurityConfig$$SpringCGLIB$$2.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258) ~[spring-core-6.0.11.jar:6.0.11]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-6.0.11.jar:6.0.11]
+	at com.iamneo.skg.config.SecurityConfig$$SpringCGLIB$$0.corsConfigurationSource(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:139) ~[spring-beans-6.0.11.jar:6.0.11]
+	... 25 common frames omitted
+
+2023-09-16T13:30:54.108+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : Starting SkgApplication using Java 17.0.8.1 with PID 26820 (D:\iamneo\clueless_coder\Hackathon\neo_hack\backend\target\classes started by KARUPPUKULLA in D:\iamneo\clueless_coder\Hackathon\neo_hack\backend)
+2023-09-16T13:30:54.110+05:30  INFO 26820 --- [restartedMain] com.iamneo.skg.SkgApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-09-16T13:30:55.509+05:30  INFO 26820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-16T13:30:55.547+05:30  INFO 26820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 1 JPA repository interfaces.
+2023-09-16T13:30:55.916+05:30  INFO 26820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8181 (http)
+2023-09-16T13:30:55.925+05:30  INFO 26820 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-16T13:30:55.926+05:30  INFO 26820 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-16T13:30:55.988+05:30  INFO 26820 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-09-16T13:30:55.989+05:30  INFO 26820 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1866 ms
+2023-09-16T13:30:56.048+05:30  INFO 26820 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-16T13:30:56.059+05:30  INFO 26820 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-16T13:30:56.060+05:30  INFO 26820 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-16T13:30:56.063+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
+2023-09-16T13:30:59.725+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-12 - Added connection com.mysql.cj.jdbc.ConnectionImpl@43a94205
+2023-09-16T13:30:59.727+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
+2023-09-16T13:30:59.730+05:30  WARN 26820 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-09-16T13:30:59.881+05:30  INFO 26820 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-16T13:31:00.111+05:30  INFO 26820 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-16T13:31:22.602+05:30  INFO 26820 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-16T13:31:22.870+05:30  WARN 26820 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-16T13:31:23.308+05:30  INFO 26820 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@71a2e14b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6ed693ca, org.springframework.security.web.context.SecurityContextHolderFilter@4e1bfe56, org.springframework.security.web.header.HeaderWriterFilter@54a6b7b4, org.springframework.security.web.authentication.logout.LogoutFilter@bd28722, com.iamneo.skg.config.JwtAuthenticationFilter@7e8d904e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@24349511, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@454e9d34, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@15d9dde3, org.springframework.security.web.session.SessionManagementFilter@5810e56f, org.springframework.security.web.access.ExceptionTranslationFilter@2bb83fa3, org.springframework.security.web.access.intercept.AuthorizationFilter@3a588c24]
+2023-09-16T13:31:23.326+05:30  WARN 26820 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'corsConfigurationSource' defined in class path resource [com/iamneo/skg/config/SecurityConfig.class]: Failed to instantiate [org.springframework.web.cors.CorsConfigurationSource]: Factory method 'corsConfigurationSource' threw exception with message: Unresolved compilation problem: 
+	Syntax error, insert ")" to complete Expression
+
+2023-09-16T13:31:23.329+05:30  INFO 26820 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-16T13:31:23.331+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown initiated...
+2023-09-16T13:31:26.247+05:30  INFO 26820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown completed.
+2023-09-16T13:31:26.250+05:30  INFO 26820 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-16T13:31:26.259+05:30  INFO 26820 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-09-16T13:31:26.266+05:30 ERROR 26820 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'corsConfigurationSource' defined in class path resource [com/iamneo/skg/config/SecurityConfig.class]: Failed to instantiate [org.springframework.web.cors.CorsConfigurationSource]: Factory method 'corsConfigurationSource' threw exception with message: Unresolved compilation problem: 
+	Syntax error, insert ")" to complete Expression
+
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:659) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:493) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1332) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.3.jar:3.1.3]
+	at com.iamneo.skg.SkgApplication.main(SkgApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.3.jar:3.1.3]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.cors.CorsConfigurationSource]: Factory method 'corsConfigurationSource' threw exception with message: Unresolved compilation problem: 
+	Syntax error, insert ")" to complete Expression
+
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:171) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655) ~[spring-beans-6.0.11.jar:6.0.11]
+	... 24 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	Syntax error, insert ")" to complete Expression
+
+	at com.iamneo.skg.config.SecurityConfig.corsConfigurationSource(SecurityConfig.java:109) ~[classes/:na]
+	at com.iamneo.skg.config.SecurityConfig$$SpringCGLIB$$0.CGLIB$corsConfigurationSource$1(<generated>) ~[classes/:na]
+	at com.iamneo.skg.config.SecurityConfig$$SpringCGLIB$$2.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258) ~[spring-core-6.0.11.jar:6.0.11]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-6.0.11.jar:6.0.11]
+	at com.iamneo.skg.config.SecurityConfig$$SpringCGLIB$$0.corsConfigurationSource(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:139) ~[spring-beans-6.0.11.jar:6.0.11]
+	... 25 common frames omitted
+
