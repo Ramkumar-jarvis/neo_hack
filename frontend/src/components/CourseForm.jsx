@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Form, Input, DatePicker, InputNumber, Button, Select } from 'antd';
-import axios from 'axios';
+import { LoginOutlined } from '@ant-design/icons';
 const CourseForm = ({ onSubmit }) => {
   const { RangePicker } = DatePicker;
   const [form] = Form.useForm();
@@ -12,23 +12,6 @@ const CourseForm = ({ onSubmit }) => {
     onSubmit(values);
     // form.resetFields();
   };
-
-  useEffect(() => {
-    const token = localStorage.getItem('jwtToken');
-    // Fetch trainers from the Spring Boot API
-    axios.get('http://localhost:8181/api/v1/trainer', {
-      headers: {
-        'Authorization': `Bearer ${token}`
-      }
-    })
-      .then(response => {
-        console.log("🚀 ~ file: CourseForm.jsx:20 ~ useEffect ~ response:", response)
-        // setTrainers(response.data);
-      })
-      .catch(error => {
-        console.error("Error fetching trainers:", error);
-      });
-  }, []);
 
   const trainerNameOptions = [
     'Trainer 1',
@@ -49,7 +32,7 @@ const CourseForm = ({ onSubmit }) => {
           </Select>
         </Form.Item>
         <Form.Item label="Trainer Gmail" name="trainerGmail" required>
-          <Input size="large" />
+          <Input size="large"/>
         </Form.Item>
       </div>
     );
@@ -70,7 +53,7 @@ const CourseForm = ({ onSubmit }) => {
             </Select>
           </Form.Item>
           <Form.Item label={`Trainer ${i + 1} Gmail`} name={`trainerGmail${i}`} required>
-            <Input size="large" />
+            <Input size="large"/>
           </Form.Item>
         </div>
       );
@@ -85,7 +68,7 @@ const CourseForm = ({ onSubmit }) => {
 
           <div>
             <Form.Item label="Order ID" name="orderId" required>
-              <Input size="large" />
+              <Input size="large"/>
             </Form.Item>
           </div>
           <div>

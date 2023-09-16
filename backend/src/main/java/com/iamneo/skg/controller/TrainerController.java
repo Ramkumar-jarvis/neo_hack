@@ -17,7 +17,7 @@ import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping(MyConstant.TRAINER_API_PATH)
-@CrossOrigin("*")
+@CrossOrigin
 @RequiredArgsConstructor
 @Tag(name = "Trainer")
 public class TrainerController {

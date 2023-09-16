@@ -17,7 +17,7 @@ import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping(MyConstant.STUDENT_API_PATH)
-@CrossOrigin("*")
+@CrossOrigin
 @RequiredArgsConstructor
 @Tag(name = "Student")
 public class StudentController {
