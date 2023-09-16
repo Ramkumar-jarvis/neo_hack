@@ -1,13 +1,13 @@
-package com.example.demo;
+package com.iamneo.skg;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemoApplication {
+public class SkgApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(SkgApplication.class, args);
 	}
 
 }

@@ -1,10 +1,10 @@
-package com.example.demo;
+package com.iamneo.skg;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemoApplicationTests {
+class SkgApplicationTests {
 
 	@Test
 	void contextLoads() {
