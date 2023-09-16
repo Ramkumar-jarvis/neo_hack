@@ -1,6 +1,6 @@
 import React from 'react';
-import { Table } from 'antd';
-
+import { Space, Table, Tag } from 'antd';
+const { Column, ColumnGroup } = Table;
 const StudentTable = ({ data }) => {
   const columns = [
     { title: 'Name', dataIndex: 'name', key: 'name' },
@@ -10,7 +10,13 @@ const StudentTable = ({ data }) => {
     { title: 'Phone Number', dataIndex: 'phoneNumber', key: 'phoneNumber' },
   ];
 
-  return <Table dataSource={data} columns={columns} />;
+  const rowSelection = {
+    onChange: (selectedRowKeys, selectedRows) => {
+      console.log(`Selected RowKeys: ${selectedRowKeys}`, 'Selected Rows: ', selectedRows);
+    },
+  };
+
+  return <Table rowSelection={rowSelection} dataSource={data} columns={columns} />;
 };
 
 export default StudentTable;

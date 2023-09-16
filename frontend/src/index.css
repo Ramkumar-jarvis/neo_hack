@@ -97,3 +97,9 @@ button:focus-visible {
 :where(.css-dev-only-do-not-override-i0102m).ant-input-number .ant-input-number-input{
   background-color: rgb(247, 249, 252) !important;
 }
+:where(.css-dev-only-do-not-override-i0102m).ant-btn-primary{
+  background-color: #1677ff !important;
+}
+:where(.css-dev-only-do-not-override-i0102m).ant-table-wrapper .ant-table{
+  border: 1px solid rgb(217, 217, 217);
+}

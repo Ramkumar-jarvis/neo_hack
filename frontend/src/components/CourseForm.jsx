@@ -1,118 +1,92 @@
 import React, { useState, useEffect } from 'react';
 import { Form, Input, DatePicker, InputNumber, Button, Select } from 'antd';
 import axios from 'axios';
+
+const { RangePicker } = DatePicker;
+const { Option } = Select;
+
 const CourseForm = ({ onSubmit }) => {
-  const { RangePicker } = DatePicker;
   const [form] = Form.useForm();
-  const [dateRange, setDateRange] = useState([]);
-  const [numTrainers, setNumTrainers] = useState(1); // Initialize with 1 trainer
-  const { Option } = Select;
-  const onFinish = (values) => {
-    console.log("🚀 ~ file: CourseForm.jsx:12 ~ onFinish ~ values:", values)
-    onSubmit(values);
-    // form.resetFields();
-  };
+  const [trainerNameOptions, setTrainerNameOptions] = useState([]);
+  const [selectedTrainerEmails, setSelectedTrainerEmails] = useState({});
+  const [numTrainers, setNumTrainers] = useState(1); 
+  const [selectedTrainerIDs, setSelectedTrainerIDs] = useState([]);
 
   useEffect(() => {
     const token = localStorage.getItem('jwtToken');
-    // Fetch trainers from the Spring Boot API
-    axios.get('http://localhost:8181/api/v1/trainer', {
+    axios.get('http://localhost:8181/api/v1/trainer/', {
       headers: {
         'Authorization': `Bearer ${token}`
       }
     })
-      .then(response => {
-        console.log("🚀 ~ file: CourseForm.jsx:20 ~ useEffect ~ response:", response)
-        // setTrainers(response.data);
-      })
-      .catch(error => {
-        console.error("Error fetching trainers:", error);
-      });
+    .then(response => {
+      if (response.data.status) {
+        setTrainerNameOptions(response.data.trainerList);
+      }
+    })
+    .catch(error => {
+      console.error("Error fetching trainers:", error);
+    });
   }, []);
 
-  const trainerNameOptions = [
-    'Trainer 1',
-    'Trainer 2',
-    'Trainer 3', // Add more options as needed
-  ];
-  // Function to render trainer name and Gmail fields for a single trainer
-  const renderTrainerFields = () => {
-    return (
-      <div className='t-flex t-gap-6'>
-        <Form.Item label="Trainer Name" className='t-basis-[20%]' name="trainerName" required>
-          <Select placeholder="Select Trainer Name">
-            {trainerNameOptions.map((name, index) => (
-              <Option key={index} value={name}>
-                {name}
-              </Option>
-            ))}
-          </Select>
-        </Form.Item>
-        <Form.Item label="Trainer Gmail" name="trainerGmail" required>
-          <Input size="large" />
-        </Form.Item>
-      </div>
-    );
+  const handleTrainerNameChange = (value, index) => {
+    console.log("🚀 ~ file: CourseForm.jsx:32 ~ handleTrainerNameChange ~ value:", value)
+    const trainer = trainerNameOptions.find(t => t.id === value);
+    setSelectedTrainerEmails(prevState => ({ ...prevState, [index]: trainer ? trainer.email : '' }));
+    // Update the list of selected trainer IDs
+    setSelectedTrainerIDs(prevState => {
+      const newState = [...prevState];
+      newState[index] = trainer ? trainer.name : '';
+      return newState;
+    });    
+    console.log("🚀 ~ file: CourseForm.jsx:35 ~ handleTrainerNameChange ~ selectedTrainerEmails:", selectedTrainerEmails)
   };
 
-  const renderAdditionalTrainers = () => {
-    const trainerFields = [];
-    for (let i = 0; i < numTrainers - 1; i++) {
-      trainerFields.push(
-        <div className='t-flex t-gap-6' key={i}>
+  const renderTrainerFields = () => {
+    const fields = [];
+    for (let i = 0; i < numTrainers; i++) {
+      fields.push(
+        <div className='t-flex t-gap-6 t-items-center' key={i}>
           <Form.Item label={`Trainer ${i + 1} Name`} className='t-basis-[20%]' name={`trainerName${i}`} required>
-            <Select size="large" placeholder="Select Trainer Name">
-              {trainerNameOptions.map((name, index) => (
-                <Option key={index} value={name}>
-                  {name}
+            <Select size="large" placeholder="Select Trainer Name" onChange={(value) => handleTrainerNameChange(value, i)}>
+              {trainerNameOptions.filter(trainer => !selectedTrainerIDs.includes(trainer.id)).map((trainer) => (
+                <Option key={trainer.id} value={trainer.id}>
+                  {trainer.name}
                 </Option>
               ))}
             </Select>
           </Form.Item>
-          <Form.Item label={`Trainer ${i + 1} Gmail`} name={`trainerGmail${i}`} required>
-            <Input size="large" />
-          </Form.Item>
+            <Input style={{ pointerEvents: "none" }} className='t-h-[42px] t-mt-[7px] t-basis-[30%]' size="large" value={selectedTrainerEmails[i]} />
         </div>
       );
     }
-    return trainerFields;
+    return fields;
   };
 
   return (
     <div>
-      <Form form={form} onFinish={onFinish} layout="vertical">
+      <Form form={form} onFinish={onSubmit} layout="vertical">
         <div className='t-flex t-gap-10'>
-
-          <div>
+          <div className='t-basis-[30%]'>
             <Form.Item label="Order ID" name="orderId" required>
               <Input size="large" />
             </Form.Item>
           </div>
-          <div>
-            <Form.Item label="Date Range" name="dateRange">
-              <RangePicker size="large"
-                value={dateRange}
-                onChange={(dates) => setDateRange(dates)}
-                showTime
-                format="YYYY-MM-DD HH:mm:ss"
-                style={{ width: '100%' }}
-              />
+          <div className='t-basis-[30%]'>
+            <Form.Item label="Course Name" name="courseName" required>
+              <Input size="large" />
             </Form.Item>
           </div>
+        </div>
+        <div className='t-flex t-basis-[30%]'>
+          <Form.Item label="Date Range" name="dateRange">
+            <RangePicker size="large" showTime format="YYYY-MM-DD HH:mm:ss" style={{ width: '100%' }} />
+          </Form.Item>
         </div>
         <Form.Item label="Number of Trainers" name="numTrainers" required>
           <InputNumber size="large" min={1} defaultValue={1} onChange={(value) => setNumTrainers(value)} />
         </Form.Item>
-        {renderTrainerFields()} {/* Always render fields for one trainer */}
-        {/* Conditionally render trainer name and Gmail fields */}
-        <div>
-          {numTrainers > 1 && renderAdditionalTrainers()}
-        </div>
-        <Form.Item>
-          <Button type="primary" htmlType="submit">
-            Create Course
-          </Button>
-        </Form.Item>
+        {renderTrainerFields()}
       </Form>
     </div>
   );
