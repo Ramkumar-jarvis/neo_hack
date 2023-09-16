@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Form, Input, Button } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import axios from 'axios';
 const LoginPage = () => {
   const navigate = useNavigate();
   // Set initial values for the form fields
@@ -10,20 +11,37 @@ const LoginPage = () => {
     password: '',
     role: 'admin', // Default role is admin
   };
-  const handleLogin = (values) => {
-    console.log("🚀 ~ file: LoginPage.jsx:14 ~ handleLogin ~ values:", values)
-    // Implement your login logic here
-    const { email, password } = values;
+  // const handleLogin = (values) => {
+  //   // console.log("🚀 ~ file: LoginPage.jsx:14 ~ handleLogin ~ values:", values)
+  //   // // Implement your login logic here
+  //   // const { email, password } = values;
 
-    // Redirect based on user role
-    // if (role === 'admin') {
-    navigate('/admin');
-    // } else if (role === 'trainer') {
-    //     navigate('/trainer');
-    // } else if (role === 'trainee') {
-    //     navigate('/trainee');
-    // }
-  };
+  //   // // Redirect based on user role
+  //   // // if (role === 'admin') {
+  //   // navigate('/admin');
+  //   // // } else if (role === 'trainer') {
+  //   // //     navigate('/trainer');
+  //   // // } else if (role === 'trainee') {
+  //   // //     navigate('/trainee');
+  //   // // }
+  // };
+
+  
+const handleLogin = async (values) => {
+  try {
+    const { email, password } = values;
+      const response = await axios.post('http://localhost:8181/api/v1/auth/login', {
+        email,
+        password
+      });
+      const token = response.data.token;
+      // Store the token in local storage or in-memory storage
+      localStorage.setItem('jwtToken', token);
+      navigate('/admin');
+  } catch (error) {
+      console.error("Authentication error:", error);
+  }
+}
 
   return (
     <div>
