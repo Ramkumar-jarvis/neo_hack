@@ -11,4 +11,6 @@ public interface CourseRepository extends JpaRepository<Course, UUID> {
 
     Optional<Course> findByOrderId(UUID orderId);
 
+    Optional<Course> findByCourseName(String courseName);
+
 }

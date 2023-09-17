@@ -13,5 +13,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class DepartmentListResponse {
     private boolean status;
-    private List<DepartmentResponse> studentList;
+    private List<DepartmentResponse> departmentList;
 }

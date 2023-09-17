@@ -13,5 +13,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class BranchListResponse {
     private boolean status;
-    private List<BranchResponse> trainerList;
+    private List<BranchResponse> branchList;
 }

@@ -28,52 +28,49 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "course_students")
 public class CourseStudent {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.UUID)
 	private UUID csId;
-	
+
 	@Column(nullable = false)
 	private UUID courseId;
-	
+
 	@Column(nullable = false)
 	private UUID studentId;
-	
+
 	@Column(nullable = false)
 	private UUID branchId;
-	
+
 	@Column(nullable = false)
 	private UUID departmentId;
-	
+
 	@Column(nullable = false)
 	private Long courseActivationStatus;
-	
-	@Column(nullable = false)
-	private Double courseDeliveryCompletion;
-	
+
 	@Column(nullable = false, columnDefinition = "BIGINT DEFAULT 1")
 	private Long session_1;
-	
+
 	@Column(nullable = false, columnDefinition = "BIGINT DEFAULT 1")
 	private Long session_2;
-	
-	@CreatedDate
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(nullable = false, updatable = false)
-    private Date createdAt;
-    
-    @LastModifiedDate
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(nullable = true)
-    private Date updatedAt;
-	
-	@PrePersist
-    protected void onCreate() {
-        createdAt = new Date();
-    }
 
-    @PreUpdate
-    protected void onUpdate() {
-        updatedAt = new Date();
-    }
+	@CreatedDate
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(nullable = false, updatable = false)
+	private Date createdAt;
+
+	@LastModifiedDate
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(nullable = true)
+	private Date updatedAt;
+
+	@PrePersist
+	protected void onCreate() {
+		createdAt = new Date();
+	}
+
+	@PreUpdate
+	protected void onUpdate() {
+		updatedAt = new Date();
+	}
 }

@@ -14,8 +14,10 @@ import lombok.NoArgsConstructor;
 public class CourseCreationRequest {
     private String id;
     private String orderId;
-    private String courseName;
     private String schoolId;
+    private String branchId;
+    private String departmentId;
+    private String courseName;
     private String startDate;
     private String endDate;
     private List<String> trainerId;

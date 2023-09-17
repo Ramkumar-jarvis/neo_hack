@@ -4,6 +4,7 @@ import java.text.ParseException;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,7 +25,7 @@ public class CourseController {
     private final CourseService courseService;
 
     @PostMapping("/create")
-    public ResponseEntity<CourseCreationResponse> createCourse(CourseCreationRequest courseCreationRequest)
+    public ResponseEntity<CourseCreationResponse> createCourse(@RequestBody CourseCreationRequest courseCreationRequest)
             throws ParseException {
         boolean isCourseCreated = courseService.createCourse(courseCreationRequest);
         return isCourseCreated
