@@ -37,27 +37,28 @@ const AdminSide = () => {
         setCourseData([course, ...courseData]);
     };
 
-    // Clear all data
-    const handleCourseCreation = () => {
-      notification.success({
-        message: 'Success',
-        description: 'Course created successfully!'
-    });
-      // const token = localStorage.getItem('jwtToken');
-      // axios.get('http://localhost:8181/api/v1/trainer/', {
-      //   headers: {
-      //     'Authorization': `Bearer ${token}`
-      //   }
-      // })
-      // .then(response => {
-      //   if (response.data.status) {
-      //     setTrainerNameOptions(response.data.trainerList);
-      //   }
-      // })
-      // .catch(error => {
-      //   console.error("Error fetching trainers:", error);
-      // });
-    };
+    // // Clear all data
+    // const handleCourseCreation = () => {
+    //   console.log("🚀 ~ file: AdminSide.jsx:126 ~ handleCourseCreation ~ studentsData:", studentsData)
+    //   notification.success({
+    //     message: 'Success',
+    //     description: 'Course created successfully!'
+    // });
+    //   // const token = localStorage.getItem('jwtToken');
+    //   // axios.get('http://localhost:8181/api/v1/course/create/', {
+    //   //   headers: {
+    //   //     'Authorization': `Bearer ${token}`
+    //   //   }
+    //   // })
+    //   // .then(response => {
+    //   //   if (response.data.status) {
+    //   //     setTrainerNameOptions(response.data.trainerList);
+    //   //   }
+    //   // })
+    //   // .catch(error => {
+    //   //   console.error("Error fetching trainers:", error);
+    //   // });
+    // };
 
     return (
         <div className='t-relative t-overflow-y-auto t-overflow-x-hidden t-max-w-[100vw] t-min-h-[100vh] t-px-10 lg:t-px-10 xl:t-px-0'>
@@ -72,14 +73,14 @@ const AdminSide = () => {
                     <div className='t-mt-10'>
                         <CourseForm onSubmit={handleCourseSubmit} />
                     </div>
-                    <div>
+                    {/* <div>
                         <StudentTable data={studentsData} />
                     </div>
                     <div className='t-flex t-mt-10'>
                         <Button type="primary" onClick={handleCourseCreation}>
                             Course creation
                         </Button>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

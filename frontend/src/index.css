@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins");
+
 :root {
   font-family: 'Poppins', sans-serif;
   line-height: 1.5;
@@ -14,15 +15,18 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-#root{
+
+#root {
   width: 100vw;
   height: 100vh;
 }
+
 a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -52,9 +56,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -65,41 +71,67 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
 }
-:where(.css-dev-only-do-not-override-i0102m).ant-form-item .ant-form-item-label >label{
+
+:where(.css-dev-only-do-not-override-i0102m).ant-form-item .ant-form-item-label>label {
   font-size: 1rem;
   font-weight: 500;
 }
-:where(.css-dev-only-do-not-override-i0102m).ant-input{
+
+:where(.css-dev-only-do-not-override-i0102m).ant-input {
   border-color: #d9d9d9 !important;
   border-radius: 6px;
 }
 
-:where(.css-dev-only-do-not-override-i0102m).ant-select-single{
+:where(.css-dev-only-do-not-override-i0102m).ant-select-single {
   height: 42px !important;
 }
 
-:where(.css-dev-only-do-not-override-i0102m).ant-picker{
+:where(.css-dev-only-do-not-override-i0102m).ant-picker {
   background-color: rgb(247, 249, 252) !important;
 }
-:where(.css-dev-only-do-not-override-i0102m).ant-input{
+
+:where(.css-dev-only-do-not-override-i0102m).ant-input {
   background-color: rgb(247, 249, 252) !important;
 }
-:where(.css-dev-only-do-not-override-i0102m).ant-select:not(.ant-select-customize-input) .ant-select-selector{
+
+:where(.css-dev-only-do-not-override-i0102m).ant-select:not(.ant-select-customize-input) .ant-select-selector {
   background-color: rgb(247, 249, 252) !important;
 }
-:where(.css-dev-only-do-not-override-i0102m).ant-input-number .ant-input-number-input{
+
+:where(.css-dev-only-do-not-override-i0102m).ant-input-number .ant-input-number-input {
   background-color: rgb(247, 249, 252) !important;
 }
-:where(.css-dev-only-do-not-override-i0102m).ant-btn-primary{
+
+:where(.css-dev-only-do-not-override-i0102m).ant-btn-primary {
   background-color: #1677ff !important;
 }
-:where(.css-dev-only-do-not-override-i0102m).ant-table-wrapper .ant-table{
+
+:where(.css-dev-only-do-not-override-i0102m).ant-table-wrapper .ant-table {
   border: 1px solid rgb(217, 217, 217);
+}
+
+:where(.css-dev-only-do-not-override-i0102m).ant-radio-button-wrapper {
+  height: 42px !important;
+  display: flex;
+  align-items: center;
+}
+
+:where(.css-dev-only-do-not-override-i0102m).ant-picker-calendar .ant-picker-calendar-header .ant-picker-calendar-mode-switch {
+  display: flex;
+}
+:where(.css-dev-only-do-not-override-i0102m).ant-input-search >.ant-input-group >.ant-input-group-addon:last-child .ant-input-search-button{
+  height: 42px !important;
+}
+:where(.css-dev-only-do-not-override-i0102m).ant-spin-nested-loading >div>.ant-spin-lg .ant-spin-text{
+  padding-top: 20px !important;
+  right: 25px !important;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Space, Table, Tag } from 'antd';
 const { Column, ColumnGroup } = Table;
-const StudentTable = ({ data }) => {
+const StudentTable = ({ data, onStudentsSelected }) => {
   const columns = [
     { title: 'Name', dataIndex: 'name', key: 'name' },
     { title: 'Gmail', dataIndex: 'gmail', key: 'gmail' },
@@ -12,6 +12,7 @@ const StudentTable = ({ data }) => {
 
   const rowSelection = {
     onChange: (selectedRowKeys, selectedRows) => {
+      onStudentsSelected(selectedRows);
       console.log(`Selected RowKeys: ${selectedRowKeys}`, 'Selected Rows: ', selectedRows);
     },
   };

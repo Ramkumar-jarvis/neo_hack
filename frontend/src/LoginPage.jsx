@@ -3,64 +3,55 @@ import { Form, Input, Button } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import axios from 'axios';
+
 const LoginPage = () => {
   const navigate = useNavigate();
-  // Set initial values for the form fields
+
   const initialValues = {
     email: '',
     password: '',
-    role: 'admin', // Default role is admin
+    role: 'admin',
   };
-  // const handleLogin = (values) => {
-  //   // console.log("🚀 ~ file: LoginPage.jsx:14 ~ handleLogin ~ values:", values)
-  //   // // Implement your login logic here
-  //   // const { email, password } = values;
 
-  //   // // Redirect based on user role
-  //   // // if (role === 'admin') {
-  //   // navigate('/admin');
-  //   // // } else if (role === 'trainer') {
-  //   // //     navigate('/trainer');
-  //   // // } else if (role === 'trainee') {
-  //   // //     navigate('/trainee');
-  //   // // }
-  // };
-
-  
-const handleLogin = async (values) => {
-  try {
-    const { email, password } = values;
+  const handleLogin = async (values) => {
+    try {
+      const { email, password } = values;
       const response = await axios.post('http://localhost:8181/api/v1/auth/login', {
         email,
         password
       });
       const token = response.data.token;
-      // Store the token in local storage or in-memory storage
       localStorage.setItem('jwtToken', token);
       navigate('/admin');
-  } catch (error) {
+    } catch (error) {
       console.error("Authentication error:", error);
+    }
   }
-}
 
   return (
-    <div>
-      <h2>Login</h2>
-      <Form onFinish={handleLogin} initialValues={initialValues}>
-        <Form.Item label="Email" name="email" rules={[{ required: true, type: 'email', message: 'Please enter a valid email' }]}>
-          <Input prefix={<UserOutlined />} placeholder="Email" />
-        </Form.Item>
-        <Form.Item label="Password" name="password" rules={[{ required: true, message: 'Please enter your password' }]}>
-          <Input prefix={<LockOutlined />}
-            type="password"
-            placeholder="Password" />
-        </Form.Item>
-        <Form.Item>
-          <Button type="primary" htmlType="submit">
-            Log In
-          </Button>
-        </Form.Item>
-      </Form>
+    <div className="t-min-h-screen t-flex t-items-center t-justify-center t-bg-gray-200">
+      <div className="t-bg-white t-p-8 t-shadow-lg t-min-w-[450px] t-rounded-md">
+        <h2 className="t-text-2xl t-font-bold t-mb-4 t-text-primary t-text-center">Login</h2>
+        <Form onFinish={handleLogin} initialValues={initialValues}>
+          <Form.Item name="email" rules={[{ required: true, type: 'email', message: 'Please enter a valid email' }]}>
+            <div className="t-flex t-border t-rounded t-p-2 t-mb-4">
+              <UserOutlined className="t-mr-2 t-text-gray-500" />
+              <Input className="t-border-none t-outline-none t-w-full" placeholder="Email" />
+            </div>
+          </Form.Item>
+          <Form.Item name="password" rules={[{ required: true, message: 'Please enter your password' }]}>
+            <div className="t-flex t-border t-rounded t-p-2 t-mb-4">
+              <LockOutlined className="t-mr-2 t-text-gray-500" />
+              <Input className="t-border-none t-outline-none t-w-full" type="password" placeholder="Password" />
+            </div>
+          </Form.Item>
+          <Form.Item>
+            <Button className="t-w-full t-bg-blue-500 t-text-white t-py-2 t-rounded" type="primary" htmlType="submit">
+              Log In
+            </Button>
+          </Form.Item>
+        </Form>
+      </div>
     </div>
   );
 };
