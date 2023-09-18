@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import { CalendarOutlined, FieldTimeOutlined, MessageOutlined } from '@ant-design/icons';
 import 'antd/dist/reset.css';
-import { SmileOutlined } from '@ant-design/icons';
-import { Button, notification } from 'antd';
+import React, { useEffect, useState } from 'react';
+import LogoutButton from '../LogoutButton';
+import AdminSchedule from './AdminSchedule';
 import CourseForm from './CourseForm';
-import StudentTable from './StudentsTable';
-import axios from 'axios';
+import IconBox from './IconBox';
+import UserProfile from './UserProfile';
 const AdminSide = () => {
     const [courseData, setCourseData] = useState([]);
     const [studentsData, setStudentsData] = useState([]);
-    const [api, contextHolder] = notification.useNotification();
-    // Initial students data
+    const [activeComponent, setActiveComponent] = useState('Course Creation'); // Default can be 'Calendar' if you want
+    const [userData, setUserData] = useState(JSON.parse(localStorage.getItem('User')));
     useEffect(() => {
         setStudentsData([
             {
@@ -59,28 +60,28 @@ const AdminSide = () => {
     //   //   console.error("Error fetching trainers:", error);
     //   // });
     // };
-
     return (
         <div className='t-relative t-overflow-y-auto t-overflow-x-hidden t-max-w-[100vw] t-min-h-[100vh] t-px-10 lg:t-px-10 xl:t-px-0'>
-            <div className='t-mt-30 t-max-w-[1100px] lg:t-mx-auto t-h-[calc(100vh-6.8rem)] lg:t-h-[calc(100vh-12.8rem)]'>
-                <div className='t-bg-white t-p-12 t-pb-18 t-border t-rounded-md lg:t-px-40 lg:t-pt-40 lg:t-pb-18'>
-                    <div className='t-text-big t-font-bold lg:t-text-xl ng-star-inserted t-text-black'>
-                        Course Creation
+            <div className='t-h-50 t-w-full t-bg-primary t-bg-opacity-10 t-fixed t-flex t-justify-center t-items-center'>
+                <div className='t-flex t-justify-around t-items-center t-w-full'>
+                    <span className='t-text-neutral-500 t-font-medium t-text-[24px]'>Admin</span>
+                    <LogoutButton />
+                </div>
+            </div>
+            <div className='t-mt-30 lg:t-mx-auto t-h-[calc(100vh-6.8rem)] t-flex t-gap-16 t-p-30'>
+                <div className='t-border t-rounded-md t-p-20 t-min-w-[306px]'>
+                    <UserProfile userData={userData} />
+                    <div className="t-flex t-flex-wrap t-justify-center t-items-center t-mt-[110px]">
+                        <IconBox IconComponent={CalendarOutlined} label="Course Creation" onClick={() => setActiveComponent('Course Creation')} />
+                        <IconBox IconComponent={FieldTimeOutlined} label="Schedule" onClick={() => setActiveComponent('Schedule')} />
+                        <IconBox IconComponent={MessageOutlined} label="Feedback" onClick={() => setActiveComponent('Feedback')} />
+                        <IconBox className='t-invisible' IconComponent={() => null} label="invisible" />
                     </div>
-                    <div className='t-mt-14 t-text-neutral-3 t-text-small ty:t-text-default lg:t-text-medium t-border-solid t-border-b t-border-b-neutral-1/10 t-w-full t-pb-20'>
-                        Create course details here
-                    </div>
-                    <div className='t-mt-10'>
-                        <CourseForm onSubmit={handleCourseSubmit} />
-                    </div>
-                    {/* <div>
-                        <StudentTable data={studentsData} />
-                    </div>
-                    <div className='t-flex t-mt-10'>
-                        <Button type="primary" onClick={handleCourseCreation}>
-                            Course creation
-                        </Button>
-                    </div> */}
+                </div>
+                <div className={`t-bg-white trans-scroll t-overflow-y-auto t-text-black t-border t-rounded-md t-p-20 t-w-full t-shadow-[0_8px_30px_rgb(0,0,0,0.12)] ${studentsData.length ? '' : 't-flex t-justify-center t-items-center'}`}>
+                    {activeComponent === 'Course Creation' && <CourseForm />}
+                    {activeComponent === 'Schedule' && <AdminSchedule />}
+
                 </div>
             </div>
         </div>

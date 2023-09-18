@@ -21,8 +21,16 @@ const LoginPage = () => {
         password
       });
       const token = response.data.token;
+      const user = response.data.user;
       localStorage.setItem('jwtToken', token);
-      navigate('/admin');
+      localStorage.setItem('User', JSON.stringify(user));
+      if(user.role === 'ADMIN'){
+        navigate('/admin');
+      }else if(user.role === 'STUDENT'){
+        navigate('/trainee');
+      }else{
+        navigate('/trainer');
+      }
     } catch (error) {
       console.error("Authentication error:", error);
     }
