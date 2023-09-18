@@ -18,6 +18,7 @@ public class StudentCalenderResponse {
     private String courseName;
     private List<String> topic;
     private String department;
+    private String branch;
     private String section;
     private String semester;
     private List<String> trainers;

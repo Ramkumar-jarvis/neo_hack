@@ -5,7 +5,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.TimeZone;
-import java.util.UUID;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -34,7 +33,7 @@ public class CourseServiceImpl implements CourseService {
 
     @Override
     public boolean createCourse(CourseCreationRequest courseCreationRequest) throws ParseException {
-        if (courseRepository.findByOrderId(UUID.fromString(courseCreationRequest.getOrderId())).isPresent()) {
+        if (courseRepository.findByOrderId(courseCreationRequest.getOrderId()).isPresent()) {
             return false;
         }
 
@@ -66,14 +65,14 @@ public class CourseServiceImpl implements CourseService {
     private Course createCourseEntity(CourseCreationRequest request, Date startDate, Date endDate) {
         var course = Course.builder()
                 .courseName(request.getCourseName())
-                .orderId(UUID.fromString(request.getOrderId()))
+                .orderId(request.getOrderId())
                 .startDate(startDate)
                 .endDate(endDate)
-                .createdBy(UUID.fromString(request.getId()))
-                .updatedBy(UUID.fromString(request.getId()))
+                .createdBy(request.getId())
+                .updatedBy(request.getId())
                 .build();
         courseRepository.save(course);
-        return courseRepository.findByOrderId(UUID.fromString(request.getOrderId())).orElseThrow();
+        return courseRepository.findByOrderId(request.getOrderId()).orElseThrow();
     }
 
     private <T> List<T> createCourseEntities(List<String> ids, Function<String, T> entityBuilder) {
@@ -85,21 +84,21 @@ public class CourseServiceImpl implements CourseService {
     private CourseStudent createCourseStudentEntity(Course course, CourseCreationRequest request, String studentId) {
         return CourseStudent.builder()
                 .courseId(course.getId())
-                .branchId(UUID.fromString(request.getBranchId()))
-                .departmentId(UUID.fromString(request.getDepartmentId()))
+                .branchId(request.getBranchId())
+                .departmentId(request.getDepartmentId())
                 .courseActivationStatus(0L)
                 .session_1(1L)
                 .session_2(1L)
-                .studentId(UUID.fromString(studentId))
+                .studentId(studentId)
                 .build();
     }
 
     private CourseTrainer createCourseTrainerEntity(Course course, CourseCreationRequest request, String trainerId) {
         return CourseTrainer.builder()
                 .courseId(course.getId())
-                .trainerId(UUID.fromString(trainerId))
-                .branchId(UUID.fromString(request.getBranchId()))
-                .departmentId(UUID.fromString(request.getDepartmentId()))
+                .trainerId(trainerId)
+                .branchId(request.getBranchId())
+                .departmentId(request.getDepartmentId())
                 .courseActivationStatus(0L)
                 .courseDeliveryCompletion(0.0)
                 .build();

@@ -87,15 +87,19 @@ public class SecurityConfig {
                                                 .hasAnyAuthority(ADMIN_DELETE.name(), TRAINER_DELETE.name())
                                                 // Student
                                                 .requestMatchers(MyConstant.STUDENT_API_PATH + "/**")
-                                                .hasAnyRole(ADMIN.name(), STUDENT.name())
+                                                .hasAnyRole(ADMIN.name(), TRAINER.name(), STUDENT.name())
                                                 .requestMatchers(GET, MyConstant.STUDENT_API_PATH + "/**")
-                                                .hasAnyAuthority(ADMIN_READ.name(), STUDENT_READ.name())
+                                                .hasAnyAuthority(ADMIN_READ.name(), TRAINER_READ.name(),
+                                                                STUDENT_READ.name())
                                                 .requestMatchers(POST, MyConstant.STUDENT_API_PATH + "/**")
-                                                .hasAnyAuthority(ADMIN_CREATE.name(), STUDENT_CREATE.name())
+                                                .hasAnyAuthority(ADMIN_CREATE.name(), TRAINER_CREATE.name(),
+                                                                STUDENT_CREATE.name())
                                                 .requestMatchers(PUT, MyConstant.STUDENT_API_PATH + "/**")
-                                                .hasAnyAuthority(ADMIN_UPDATE.name(), STUDENT_UPDATE.name())
+                                                .hasAnyAuthority(ADMIN_UPDATE.name(), TRAINER_UPDATE.name(),
+                                                                STUDENT_UPDATE.name())
                                                 .requestMatchers(DELETE, MyConstant.STUDENT_API_PATH + "/**")
-                                                .hasAnyAuthority(ADMIN_DELETE.name(), STUDENT_DELETE.name())
+                                                .hasAnyAuthority(ADMIN_DELETE.name(), TRAINER_DELETE.name(),
+                                                                STUDENT_DELETE.name())
                                                 .anyRequest().authenticated())
                                 .sessionManagement(session -> session
                                                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS))

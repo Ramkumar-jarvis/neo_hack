@@ -16,7 +16,7 @@ public class RegisterRequest {
 	private String lastName;
 	private Long portalStatus;
 	private String registrationNumber;
-    	private String email;
-   	private String password;
-    	private Role role;
+	private String email;
+	private String password;
+	private Role role;
 }

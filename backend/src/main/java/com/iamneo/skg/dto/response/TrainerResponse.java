@@ -1,7 +1,5 @@
 package com.iamneo.skg.dto.response;
 
-import java.util.UUID;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class TrainerResponse {
-	private UUID id;
+	private String id;
 	private String name;
 	private String email;
 }

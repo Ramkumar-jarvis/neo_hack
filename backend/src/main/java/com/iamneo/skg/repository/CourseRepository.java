@@ -1,15 +1,14 @@
 package com.iamneo.skg.repository;
 
 import java.util.Optional;
-import java.util.UUID;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.iamneo.skg.model.Course;
 
-public interface CourseRepository extends JpaRepository<Course, UUID> {
+public interface CourseRepository extends JpaRepository<Course, String> {
 
-    Optional<Course> findByOrderId(UUID orderId);
+    Optional<Course> findByOrderId(String orderId);
 
     Optional<Course> findByCourseName(String courseName);
 

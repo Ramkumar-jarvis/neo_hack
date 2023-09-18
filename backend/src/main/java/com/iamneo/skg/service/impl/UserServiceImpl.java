@@ -42,7 +42,8 @@ public class UserServiceImpl implements UserService {
 					.portalStatus(request.getPortalStatus())
 					.registrationNumber(request.getRegistrationNumber())
 					.password(passwordEncoder.encode(request.getPassword()))
-					.role(Role.STUDENT)
+					.semester("Sem 3")
+					.role(Role.ADMIN)
 					.build();
 			userRepository.save(user);
 			return true;
@@ -61,6 +62,7 @@ public class UserServiceImpl implements UserService {
 				.id(user.getId())
 				.name(user.getFirstName() + " " + user.getLastName())
 				.email(user.getEmail())
+				.role(user.getRole())
 				.build();
 		var token = jwtUtil.generateToken(user);
 		return AuthenticationResponse.builder()

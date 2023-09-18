@@ -1,7 +1,6 @@
 package com.iamneo.skg.model;
 
 import java.util.Date;
-import java.util.UUID;
 
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -31,31 +30,31 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "school_batches")
 public class Batch {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.UUID)
-	private UUID id;
-	
-	@Column(length = 100, nullable = false)
-	private String batchName;
-	
-	@CreatedDate
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private String id;
+
+    @Column(length = 100, nullable = false)
+    private String batchName;
+
+    @CreatedDate
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false, updatable = false)
     private Date createdAt;
-    
+
     @LastModifiedDate
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = true)
     private Date updatedAt;
-	
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	private School school;
-	
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	private Branch branch;
-	
-	@PrePersist
+
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private School school;
+
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Branch branch;
+
+    @PrePersist
     protected void onCreate() {
         createdAt = new Date();
     }

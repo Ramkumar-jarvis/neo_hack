@@ -1,7 +1,6 @@
 package com.iamneo.skg.model;
 
 import java.util.Date;
-import java.util.UUID;
 
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -31,19 +30,19 @@ public class CourseStudent {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.UUID)
-	private UUID csId;
+	private String csId;
 
 	@Column(nullable = false)
-	private UUID courseId;
+	private String courseId;
 
 	@Column(nullable = false)
-	private UUID studentId;
+	private String studentId;
 
 	@Column(nullable = false)
-	private UUID branchId;
+	private String branchId;
 
 	@Column(nullable = false)
-	private UUID departmentId;
+	private String departmentId;
 
 	@Column(nullable = false)
 	private Long courseActivationStatus;

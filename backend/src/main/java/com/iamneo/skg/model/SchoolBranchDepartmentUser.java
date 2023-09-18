@@ -1,7 +1,6 @@
 package com.iamneo.skg.model;
 
 import java.util.Date;
-import java.util.UUID;
 
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -30,44 +29,44 @@ import lombok.NoArgsConstructor;
 public class SchoolBranchDepartmentUser {
 	@Id
 	@GeneratedValue(strategy = GenerationType.UUID)
-	private UUID sbduId;
-	
-	@Column(nullable = false)
-	private UUID userId;
-	
-	@Column(nullable = false)
-	private UUID schoolId;
-	
-	@Column(nullable = false)
-	private UUID branchId;
-	
-	@Column(nullable = false)
-	private UUID departmentId;
-	
-	@Column(nullable = false)
-	private UUID batchId;
-	
-	@Column(nullable = false)
-	private UUID degreeId;
-	
-	@CreatedDate
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(nullable = false, updatable = false)
-    private Date createdAt;
-    
-    @LastModifiedDate
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(nullable = true)
-    private Date updatedAt;
-	
-	@PrePersist
-    protected void onCreate() {
-        createdAt = new Date();
-    }
+	private String sbduId;
 
-    @PreUpdate
-    protected void onUpdate() {
-        updatedAt = new Date();
-    }
-    
+	@Column(nullable = false)
+	private String userId;
+
+	@Column(nullable = false)
+	private String schoolId;
+
+	@Column(nullable = false)
+	private String branchId;
+
+	@Column(nullable = false)
+	private String departmentId;
+
+	@Column(nullable = false)
+	private String batchId;
+
+	@Column(nullable = false)
+	private String degreeId;
+
+	@CreatedDate
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(nullable = false, updatable = false)
+	private Date createdAt;
+
+	@LastModifiedDate
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(nullable = true)
+	private Date updatedAt;
+
+	@PrePersist
+	protected void onCreate() {
+		createdAt = new Date();
+	}
+
+	@PreUpdate
+	protected void onUpdate() {
+		updatedAt = new Date();
+	}
+
 }

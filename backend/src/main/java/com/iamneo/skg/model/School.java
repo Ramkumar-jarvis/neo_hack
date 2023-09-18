@@ -2,7 +2,6 @@ package com.iamneo.skg.model;
 
 import java.util.Date;
 import java.util.List;
-import java.util.UUID;
 
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -32,49 +31,49 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "schools")
 public class School {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.UUID)
-	private UUID id;
-	
+	private String id;
+
 	@Column(length = 250, nullable = false)
 	private String schoolName;
-	
+
 	@Column(length = 50, nullable = false)
 	private String schoolCode;
-	
+
 	@Column(nullable = false)
 	private Long schoolStatus;
-	
+
 	@CreatedDate
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(nullable = false, updatable = false)
-    private Date createdAt;
-    
-    @LastModifiedDate
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(nullable = true)
-    private Date updatedAt;
-	
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(nullable = false, updatable = false)
+	private Date createdAt;
+
+	@LastModifiedDate
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(nullable = true)
+	private Date updatedAt;
+
 	@OneToMany(mappedBy = "school", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private List<Branch> branches;
-	
+
 	@OneToMany(mappedBy = "school", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private List<Department> departments;
-	
+
 	@OneToMany(mappedBy = "school", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private List<Batch> batches;
-	
+
 	@OneToMany(mappedBy = "school", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private List<Degree> degrees;
-	
-	@PrePersist
-    protected void onCreate() {
-        createdAt = new Date();
-    }
 
-    @PreUpdate
-    protected void onUpdate() {
-        updatedAt = new Date();
-    }
+	@PrePersist
+	protected void onCreate() {
+		createdAt = new Date();
+	}
+
+	@PreUpdate
+	protected void onUpdate() {
+		updatedAt = new Date();
+	}
 }

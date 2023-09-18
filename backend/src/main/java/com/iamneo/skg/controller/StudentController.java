@@ -33,7 +33,7 @@ public class StudentController {
 	}
 
 	@GetMapping("/calender")
-	public ResponseEntity<StudentCalenderResponse> getStudentCalender(@RequestParam String studentId) {
-		return ResponseEntity.ok().body(studentService.getStudentCalender(studentId));
+	public ResponseEntity<StudentCalenderResponse> getStudentCalender(@RequestParam String id) {
+		return ResponseEntity.ok().body(studentService.getStudentCalender(id));
 	}
 }

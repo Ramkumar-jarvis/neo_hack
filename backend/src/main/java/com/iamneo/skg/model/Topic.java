@@ -1,7 +1,6 @@
 package com.iamneo.skg.model;
 
 import java.util.Date;
-import java.util.UUID;
 
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -34,7 +33,7 @@ public class Topic {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    private String id;
 
     @Column(length = 100, nullable = false)
     private String topicName;

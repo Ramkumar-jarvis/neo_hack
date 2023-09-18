@@ -1,6 +1,6 @@
 package com.iamneo.skg.dto.response;
 
-import java.util.UUID;
+import com.iamneo.skg.model.enumerated.Role;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,7 +12,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserResponse {
-	private UUID id;
+	private String id;
 	private String name;
 	private String email;
+	private Role role;
 }

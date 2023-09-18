@@ -1,7 +1,6 @@
 package com.iamneo.skg.model;
 
 import java.util.Date;
-import java.util.UUID;
 
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -31,43 +30,43 @@ public class CourseTrainer {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.UUID)
-	private UUID ctId;
-	
+	private String ctId;
+
 	@Column(nullable = false)
-	private UUID courseId;
-	
+	private String courseId;
+
 	@Column(nullable = false)
-	private UUID trainerId;
-	
+	private String trainerId;
+
 	@Column(nullable = false)
-	private UUID branchId;
-	
+	private String branchId;
+
 	@Column(nullable = false)
-	private UUID departmentId;
-	
+	private String departmentId;
+
 	@Column(nullable = false)
 	private Long courseActivationStatus;
-	
+
 	@Column(nullable = false)
 	private Double courseDeliveryCompletion;
-	
-	@CreatedDate
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(nullable = false, updatable = false)
-    private Date createdAt;
-    
-    @LastModifiedDate
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(nullable = true)
-    private Date updatedAt;
-	
-	@PrePersist
-    protected void onCreate() {
-        createdAt = new Date();
-    }
 
-    @PreUpdate
-    protected void onUpdate() {
-        updatedAt = new Date();
-    }
+	@CreatedDate
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(nullable = false, updatable = false)
+	private Date createdAt;
+
+	@LastModifiedDate
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(nullable = true)
+	private Date updatedAt;
+
+	@PrePersist
+	protected void onCreate() {
+		createdAt = new Date();
+	}
+
+	@PreUpdate
+	protected void onUpdate() {
+		updatedAt = new Date();
+	}
 }

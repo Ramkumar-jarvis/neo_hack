@@ -2,7 +2,6 @@ package com.iamneo.skg.model;
 
 import java.util.Date;
 import java.util.List;
-import java.util.UUID;
 
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
@@ -37,13 +36,13 @@ public class Course {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.UUID)
-	private UUID id;
+	private String id;
 
 	@Column(length = 50, nullable = false)
 	private String courseName;
 
 	@Column(nullable = false)
-	private UUID orderId;
+	private String orderId;
 
 	@Column(nullable = false)
 	private Date startDate;
@@ -53,11 +52,11 @@ public class Course {
 
 	@CreatedBy
 	@Column(nullable = false)
-	private UUID createdBy;
+	private String createdBy;
 
 	@LastModifiedBy
 	@Column(nullable = false)
-	private UUID updatedBy;
+	private String updatedBy;
 
 	@CreatedDate
 	@Temporal(TemporalType.TIMESTAMP)

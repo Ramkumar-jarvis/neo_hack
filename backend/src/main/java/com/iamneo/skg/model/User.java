@@ -2,7 +2,6 @@ package com.iamneo.skg.model;
 
 import java.util.Collection;
 import java.util.Date;
-import java.util.UUID;
 
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -38,37 +37,40 @@ import lombok.NoArgsConstructor;
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    private String id;
 
     @Column(length = 100, nullable = false)
     private String userName;
 
     @Column(length = 50, nullable = false)
     private String email;
-    
+
     @Column(length = 50, nullable = false)
     private String firstName;
-    
+
     @Column(length = 50, nullable = true)
     private String lastName;
-    
+
     @Column(nullable = false)
     private Long portalStatus;
-    
+
     @Column(nullable = true)
-	private String registrationNumber;
+    private String registrationNumber;
+
+    @Column(nullable = true)
+    private String semester;
 
     @Column(nullable = false)
     private String password;
 
     @Enumerated(EnumType.STRING)
     private Role role;
-    
+
     @CreatedDate
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false, updatable = false)
     private Date createdAt;
-    
+
     @LastModifiedDate
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = true)
@@ -108,7 +110,7 @@ public class User implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
-    
+
     @PrePersist
     protected void onCreate() {
         createdAt = new Date();
